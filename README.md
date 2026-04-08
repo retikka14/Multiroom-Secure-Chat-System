@@ -1,26 +1,73 @@
-# Multi-Room Secure Chat System
+# 🔐 Multi-Room Secure Chat System with File Transfer
 
-## 📌 Description
-This project is a multi-client chat application using TCP socket programming.
-It supports chat rooms, private messaging, file transfer, and secure communication using SSL/TLS.
+## 📌 Overview
+A secure client-server chat application supporting multiple chat rooms and encrypted file transfer using SSL/TLS. Designed to demonstrate socket programming, secure communication, and concurrent client handling.
 
 ---
 
 ## 🚀 Features
-- Multi-client support
-- Multi-room chat
-- Private messaging
-- File transfer
-- SSL/TLS secure communication
-- Threaded server
+- Multi-room real-time chat
+- Multiple concurrent clients
+- SSL/TLS encrypted communication
+- Secure file transfer
+- Message broadcasting within rooms
 
 ---
 
-## 🛠 Requirements
-- Python 3.x
+## 🏗️ Architecture
+**Client–Server Model**
+
+- Server:
+  - Room Management
+  - Message Routing
+  - File Handling
+- Clients:
+  - Connect via secure sockets (TLS)
+  - Send/receive messages and files
 
 ---
 
-## ▶️ How to Run
+## 🛠️ Tech Stack
+- Language: Python 
+- Networking: TCP Sockets
+- Security: SSL/TLS
 
-### Start Server
+---
+
+## ⚙️ Setup
+
+### Clone Repo
+```bash
+git clone https://github.com/your-username/secure-chat-system.git
+cd secure-chat-system
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Generate SSL Certificate
+```bash
+openssl req -new -x509 -days 365 -nodes -out server.crt -keyout server.key
+```
+
+### Run
+```bash
+# Start Server
+python server/server.py
+
+# Start Client
+python client/client.py
+```
+
+---
+
+## ▶️ Usage
+1. Start server  
+2. Run multiple clients  
+3. Login/Register  
+4. Join/Create room  
+5. Chat & transfer files securely  
+
+---
