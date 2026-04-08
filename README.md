@@ -1,73 +1,64 @@
-# 🔐 Multi-Room Secure Chat System with File Transfer
+# Multi-Client Chat Application
 
-## 📌 Overview
-A secure client-server chat application supporting multiple chat rooms and encrypted file transfer using SSL/TLS. Designed to demonstrate socket programming, secure communication, and concurrent client handling.
+## Overview
+This project is a TCP-based client–server chat application that supports multiple clients simultaneously. It includes chat rooms, private messaging, file transfer, and secure communication using SSL/TLS.
 
----
+## Features
+- Multi-client support using threading  
+- Multiple chat rooms  
+- Private messaging between users  
+- File transfer capability  
+- Secure communication with SSL/TLS  
 
-## 🚀 Features
-- Multi-room real-time chat
-- Multiple concurrent clients
-- SSL/TLS encrypted communication
-- Secure file transfer
-- Message broadcasting within rooms
+## Technologies Used
+- Python (Sockets, Threading, SSL)
+- TCP/IP Protocol
 
----
-
-## 🏗️ Architecture
-**Client–Server Model**
-
-- Server:
-  - Room Management
-  - Message Routing
-  - File Handling
-- Clients:
-  - Connect via secure sockets (TLS)
-  - Send/receive messages and files
-
----
-
-## 🛠️ Tech Stack
-- Language: Python 
-- Networking: TCP Sockets
-- Security: SSL/TLS
-
----
-
-## ⚙️ Setup
-
-### Clone Repo
-```bash
-git clone https://github.com/your-username/secure-chat-system.git
-cd secure-chat-system
+## Project Structure
+```
+/project-folder
+│── server.py
+│── client.py
+│── ssl_cert.pem
+│── ssl_key.pem
+│── README.md
 ```
 
-### Install Dependencies
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd project-folder
+   ```
+
+2. Install dependencies (if any):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Start the Server
 ```bash
-pip install -r requirements.txt
+python server.py
 ```
 
-### Generate SSL Certificate
+### Start the Client
 ```bash
-openssl req -new -x509 -days 365 -nodes -out server.crt -keyout server.key
+python client.py
 ```
 
-### Run
-```bash
-# Start Server
-python server/server.py
+## How It Works
+- The server listens for incoming client connections.
+- Each client is handled in a separate thread.
+- Users can join chat rooms or send private messages.
+- Files can be transferred between clients.
+- SSL/TLS ensures encrypted communication.
 
-# Start Client
-python client/client.py
-```
+## Security
+- Uses SSL/TLS for encrypted data transmission.
+- Requires certificate and key files (`ssl_cert.pem`, `ssl_key.pem`).
 
----
 
-## ▶️ Usage
-1. Start server  
-2. Run multiple clients  
-3. Login/Register  
-4. Join/Create room  
-5. Chat & transfer files securely  
-
----
+## License
+This project is for educational purposes.
